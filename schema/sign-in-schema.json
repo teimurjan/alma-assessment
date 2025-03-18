@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "errorMessage": "Invalid email format"
+    },
+    "password": {
+      "format": "password",
+      "type": "string",
+      "minLength": 8,
+      "pattern": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+      "errorMessage": {
+        "minLength": "Password must be at least 8 characters long",
+        "pattern": "Password must contain at least one letter and one number"
+      }
+    }
+  },
+  "required": ["email", "password"]
+}

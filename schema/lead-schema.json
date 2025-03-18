@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "minLength": 2,
+      "title": "First Name",
+      "errorMessage": {
+        "type": "First Name must be a text value.",
+        "minLength": "First Name must be at least 2 characters long."
+      }
+    },
+    "lastName": {
+      "type": "string",
+      "minLength": 2,
+      "title": "Last Name",
+      "errorMessage": {
+        "type": "Last Name must be a text value.",
+        "minLength": "Last Name must be at least 2 characters long."
+      }
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email",
+      "errorMessage": {
+        "type": "Email must be a text value.",
+        "format": "Please enter a valid email address."
+      }
+    },
+    "country": {
+      "type": "string",
+      "enum": ["United States", "Canada", "United Kingdom", "Other"],
+      "title": "Country of Citizenship",
+      "errorMessage": {
+        "enum": "Country of Citizenship must be one of the available options."
+      }
+    },
+    "linkedIn": {
+      "type": "string",
+      "format": "uri",
+      "title": "LinkedIn / Personal Website URL",
+      "errorMessage": {
+        "format": "Please enter a valid URL."
+      }
+    },
+    "resume": {
+      "type": "string",
+      "title": "Resume",
+      "description": "Upload your resume or CV to help us better understand your background"
+    },
+    "visaCategory": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["O-1", "EB-1A", "EB-2 NIW", "I don't know"]
+      },
+      "title": "Visa categories of interest?",
+      "errorMessage": {
+        "enum": "Please select one of the visa categories provided."
+      }
+    },
+    "details": {
+      "type": "string",
+      "minLength": 10,
+      "title": "How can we help you?",
+      "description": "Tell us about your background, what is your past immigration history? Can you work in the US? Are you currently employed? What are your goals? What is your timeline for filing?",
+      "errorMessage": {
+        "minLength": "Please provide at least 10 characters in the details field."
+      }
+    }
+  },
+  "required": [
+    "firstName",
+    "lastName",
+    "email",
+    "country",
+    "visaCategory",
+    "details",
+    "resume"
+  ]
+}

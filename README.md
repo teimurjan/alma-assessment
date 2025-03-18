@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alma Assessment
+
+## Overview
+
+This project provides a streamlined interface for managing leads through a public-facing form and a secured internal dashboard. Built with robust tools and clean architecture, it facilitates efficient data management and user authorization.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up and run the application locally.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v20.x or later)
+- [npm](https://www.npmjs.com/) (v10.x or later)
+- [Docker](https://www.docker.com/)
+
+### Installation
+
+1. **Clone the Repository**:
+
+```sh
+git clone https://github.com/your-username/alma-assessment.git
+cd alma-assessment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Configure Environment Variables**:
 
-## Learn More
+Copy the example environment files and customize them as necessary:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+cp .env.example .env
+cp .env.docker.example .env.docker
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Start the Database**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Make sure Docker is running, then execute:
 
-## Deploy on Vercel
+```sh
+make up
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Seed the Database**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Since there is no registration flow, seed a user with the provided script:
+
+```sh
+env DATABASE_URL=postgresql://test:test1234@localhost:5432/alma ADMIN_PASSWORD=Admin1234 npm run seed
+```
+
+Replace `DATABASE_URL` with the URL from your `.env` file and set `ADMIN_PASSWORD` according to validation rules.
+
+6. **Run the Application**:
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+The app will be accessible at [http://localhost:3000](http://localhost:3000).
+
+---
+
+
+## Next Steps
+
+- **Check [](./DESIGN.md)**
