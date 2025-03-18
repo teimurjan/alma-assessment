@@ -21,7 +21,7 @@ Follow these instructions to set up and run the application locally.
 1. **Clone the Repository**:
 
 ```sh
-git clone https://github.com/your-username/alma-assessment.git
+git clone https://github.com/teimurjan/alma-assessment.git
 cd alma-assessment
 ```
 
@@ -73,4 +73,4 @@ The app will be accessible at [http://localhost:3000](http://localhost:3000).
 
 ## Next Steps
 
-- **Check [](./DESIGN.md)**
+- **Check [DESIGN.md](./DESIGN.md)**

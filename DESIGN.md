@@ -23,6 +23,7 @@ The frontend is built using [Next.js](https://nextjs.org/), a React framework th
   - `ui/`: Shared design system components.
   - `dumb/`: Data-free pure components.
   - `widgets/`: Components with data interactions.
+- `data/`: Contains data bindings with state management based on [Tanstack Query](https://tanstack.com/query/latest)
 
 ### Backend
 
