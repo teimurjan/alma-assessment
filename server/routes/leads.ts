@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { AppDataSource } from "@/api/config/database";
+import { AppDataSource } from "@/server/config/database";
 import schema from "@/schema/lead-schema.json";
 import Container from "typedi";
-import { LeadService } from "@/api/services/lead";
-import type { CreateLeadDTO } from "@/api/dto/create-lead";
+import { LeadService } from "@/server/services/lead";
+import type { CreateLeadDTO } from "@/server/dto/create-lead";
 import { createSchemaValidator } from "@/validator/create-schema-validator";
-import type { GetLeadsDTO } from "@/api/dto/get-leads-dto";
+import type { GetLeadsDTO } from "@/server/dto/get-leads-dto";
 import { Lead } from "../entities/lead";
 import { UserService } from "../services/user";
 import { MarkLeadReachedDTO } from "../dto/mark-lead-reached-dto";

@@ -1,1 +1,1 @@
-export * from "@/api/routes/leads";
+export * from "@/server/routes/leads";

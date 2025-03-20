@@ -1,7 +1,7 @@
 import { Service } from "typedi";
 import { Repository } from "typeorm";
-import { Lead } from "@/api/entities/lead";
-import { AppDataSource } from "@/api/config/database";
+import { Lead } from "@/server/entities/lead";
+import { AppDataSource } from "@/server/config/database";
 
 @Service()
 export class LeadRepository {

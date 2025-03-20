@@ -1,7 +1,7 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { Lead } from "@/api/entities/lead";
+import { Lead } from "@/server/entities/lead";
 import { Select } from "@radix-ui/react-select";
 import {
   SelectContent,

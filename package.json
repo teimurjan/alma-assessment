@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "types:generate": "json2ts -i 'schema/**/*.json' -o schema/",
-    "seed": "ts-node -r tsconfig-paths/register ./api/seed/seed.ts"
+    "seed": "ts-node -r tsconfig-paths/register ./server/seed/seed.ts"
   },
   "dependencies": {
     "@jsonforms/core": "^3.5.1",

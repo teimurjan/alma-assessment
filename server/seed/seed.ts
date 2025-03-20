@@ -1,5 +1,5 @@
-import { AppDataSource } from "@/api/config/database";
-import { UserService } from "@/api/services/user";
+import { AppDataSource } from "@/server/config/database";
+import { UserService } from "@/server/services/user";
 import Container from "typedi";
 
 const seed = async () => {

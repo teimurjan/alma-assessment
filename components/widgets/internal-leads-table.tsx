@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ChevronDown, Loader2 } from "lucide-react";
 import { useLeads } from "@/data/use-leads";
-import { Lead } from "@/api/entities/lead";
+import { Lead } from "@/server/entities/lead";
 import { InternalLeadsTableFilters } from "../dumb/internal/internal-leads-table-filters";
 import { InternalLeadsTablePagination } from "../dumb/internal/internal-leads-table-pagination";
 import { Button } from "../ui/button";

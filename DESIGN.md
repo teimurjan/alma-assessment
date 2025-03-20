@@ -29,7 +29,7 @@ The frontend is built using [Next.js](https://nextjs.org/), a React framework th
 
 The backend is built using Node.js and TypeScript, following a service-oriented architecture. The backend application is organized into the following directories:
 
-- `api/`: Contains the API services and related code, organized into subdirectories:
+- `server/`: Contains the API services and related code, organized into subdirectories:
   - `config/`: Database configurations.
   - `dto/`: Data Transfer Objects for services.
   - `entities/`: ORM entities.
@@ -76,17 +76,17 @@ The data flow in the Alma Assessment project follows a clear and structured path
 - Public form enabling lead submission.
 - Core logic encapsulated in [`LeadForm`](./components/widgets/lead-form.tsx).
 - Form generation driven by [JSON schema](./schema/lead-schema.json) using a custom wrapper [`CustomJsonForm`](./components/dumb/form/custom-json-form.tsx) around [JsonForms](https://jsonforms.io/).
-- Validated form submissions trigger a POST request to [`POST lead route`](./api/routes/leads.ts).
+- Validated form submissions trigger a POST request to [`POST lead route`](./server/routes/leads.ts).
 
 ### Internal Dashboard (`/internal`)
 
 - Protected dashboard for authorized personnel to manage lead data.
 - Uses [`InternalLeadsTable`](./components/widgets/internal-leads-table.tsx) for browsing and updating leads.
-- Features include searching, pagination, and filtering through the dedicated [leads API](./api/routes/leads.ts).
+- Features include searching, pagination, and filtering through the dedicated [leads API](./server/routes/leads.ts).
 - Access restricted exclusively to authenticated users.
 
 ### Sign In (`/sign-in`)
 
 - Authentication page securing internal application features.
 - Implements [`SignInForm`](./components/widgets/sign-in-form.tsx), leveraging JSONForms for consistent design.
-- Authentication managed via the dedicated [`sign-in route`](./api/routes/sign-in.ts).
+- Authentication managed via the dedicated [`sign-in route`](./server/routes/sign-in.ts).

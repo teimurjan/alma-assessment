@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import { AppDataSource } from "@/api/config/database";
+import { AppDataSource } from "@/server/config/database";
 import schema from "@/schema/sign-in-schema.json";
 import Container from "typedi";
-import { UserService } from "@/api/services/user";
+import { UserService } from "@/server/services/user";
 import { createSchemaValidator } from "@/validator/create-schema-validator";
 
 export async function POST(request: Request) {

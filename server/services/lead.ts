@@ -1,7 +1,7 @@
 import { Service } from "typedi";
-import { LeadRepository } from "@/api/repositories/lead";
-import { Lead } from "@/api/entities/lead";
-import { CreateLeadDTO } from "@/api/dto/create-lead";
+import { LeadRepository } from "@/server/repositories/lead";
+import { Lead } from "@/server/entities/lead";
+import { CreateLeadDTO } from "@/server/dto/create-lead";
 import { GetLeadsDTO } from "../dto/get-leads-dto";
 import { MarkLeadReachedDTO } from "../dto/mark-lead-reached-dto";
 

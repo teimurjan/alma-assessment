@@ -1,4 +1,4 @@
-import { Lead } from "@/api/entities/lead";
+import { Lead } from "@/server/entities/lead";
 import {
   InfiniteData,
   useMutation,

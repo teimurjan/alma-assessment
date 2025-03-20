@@ -1,9 +1,9 @@
 import { Service } from "typedi";
-import { UserRepository } from "@/api/repositories/user";
-import { User } from "@/api/entities/user";
-import { comparePasswords, hashPassword } from "@/api/utils/password";
+import { UserRepository } from "@/server/repositories/user";
+import { User } from "@/server/entities/user";
+import { comparePasswords, hashPassword } from "@/server/utils/password";
 import jwt from "jsonwebtoken";
-import { CreateUserDTO } from "@/api/dto/create-user";
+import { CreateUserDTO } from "@/server/dto/create-user";
 
 @Service()
 export class UserService {

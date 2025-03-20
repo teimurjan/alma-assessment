@@ -1,1 +1,1 @@
-export * from "@/api/routes/sign-in";
+export * from "@/server/routes/sign-in";
