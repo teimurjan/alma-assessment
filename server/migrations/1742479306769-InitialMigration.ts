@@ -12,7 +12,7 @@ export class InitialMigration1742479306769 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`DROP TABLE "lead"`);
         await queryRunner.query(`DROP TYPE "public"."lead_status_enum"`);
-        await queryRunner.query(`DROP TABLE "user"`);
+        await queryRunner.query(`DROP TABLE "user_"`);
     }
 
 }
